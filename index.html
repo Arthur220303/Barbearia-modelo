@@ -24,7 +24,7 @@ header{
 position:fixed;
 top:0;
 width:100%;
-padding:18px;
+padding:20px;
 background:rgba(0,0,0,0.85);
 backdrop-filter:blur(10px);
 text-align:center;
@@ -46,7 +46,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:120px 20px 60px;
+padding:120px 20px;
 background:linear-gradient(135deg,#000,#1a1a1a);
 }
 
@@ -60,7 +60,7 @@ max-width:600px;
 color:#ccc;
 font-size:18px;
 line-height:1.6;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
 /* BOTÃO */
@@ -79,52 +79,69 @@ box-shadow:0 0 20px rgba(197,157,95,.5);
 transform:scale(1.07);
 }
 
-/* SEÇÃO */
-.section{
-padding:100px 20px;
+/* AGENDAMENTO PAINEL */
+.agenda{
+padding:80px 20px;
 text-align:center;
 }
 
-.cards{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-margin-top:50px;
-}
-
-.card{
+.agenda-box{
 background:#151515;
-padding:30px;
-width:260px;
-border-radius:15px;
-transition:.4s;
+max-width:500px;
+margin:auto;
+padding:40px;
+border-radius:20px;
+box-shadow:0 0 30px rgba(197,157,95,.2);
 }
 
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(197,157,95,.3);
+input, select{
+width:100%;
+padding:14px;
+margin-top:15px;
+border-radius:8px;
+border:none;
+background:#222;
+color:white;
 }
 
-/* FOOTER */
+.agendar-btn{
+margin-top:25px;
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#c59d5f;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* REDES */
+.social{
+padding:60px 20px;
+text-align:center;
+}
+
+.social a{
+display:inline-block;
+margin:15px;
+padding:15px 25px;
+background:#151515;
+color:white;
+text-decoration:none;
+border-radius:10px;
+transition:.3s;
+}
+
+.social a:hover{
+background:#c59d5f;
+color:black;
+}
+
 footer{
 background:black;
 padding:30px;
 text-align:center;
 margin-top:80px;
-}
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:30px;
-}
-
-.cards{
-flex-direction:column;
-align-items:center;
-}
-
 }
 
 </style>
@@ -142,38 +159,57 @@ align-items:center;
 <h1>Estilo e Sofisticação Masculina</h1>
 
 <p>
-Experiência premium em cortes, barba e cuidados masculinos
-com atendimento profissional e ambiente moderno.
+Agende seu horário de forma simples e rápida.
+Escolha o dia, horário e serviço desejado.
 </p>
 
-<a class="btn" href="#">
-Agendar Horário
-</a>
+<a class="btn" href="#agenda">Agendar Agora</a>
 
 </section>
 
-<section class="section">
+<!-- AGENDAMENTO -->
+<section id="agenda" class="agenda">
 
-<h2>Serviços</h2>
+<h2>Agendamento Online</h2>
 
-<div class="cards">
+<div class="agenda-box">
 
-<div class="card">
-<h3>Corte Premium</h3>
-<p>Estilo moderno e sofisticado.</p>
+<input type="text" placeholder="Seu nome">
+
+<input type="date">
+
+<select>
+<option>Escolha o horário</option>
+<option>09:00</option>
+<option>10:00</option>
+<option>11:00</option>
+<option>14:00</option>
+<option>15:00</option>
+<option>16:00</option>
+</select>
+
+<select>
+<option>Escolha o serviço</option>
+<option>Corte Masculino</option>
+<option>Barba</option>
+<option>Combo Premium</option>
+</select>
+
+<button class="agendar-btn">
+Confirmar Agendamento
+</button>
+
 </div>
 
-<div class="card">
-<h3>Barba</h3>
-<p>Acabamento profissional.</p>
-</div>
+</section>
 
-<div class="card">
-<h3>Combo VIP</h3>
-<p>Corte + barba completo.</p>
-</div>
+<!-- REDES -->
+<section class="social">
 
-</div>
+<h2>Redes Sociais</h2>
+
+<a href="#">📸 Instagram</a>
+<a href="#">💬 WhatsApp</a>
 
 </section>
 
