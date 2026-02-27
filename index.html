@@ -15,105 +15,116 @@ font-family:Arial, sans-serif;
 }
 
 body{
-background:#111;
+background:#0d0d0d;
 color:white;
-text-align:center;
 }
 
 /* HEADER */
 header{
-background:black;
+position:fixed;
+top:0;
+width:100%;
 padding:18px;
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(10px);
+text-align:center;
+z-index:1000;
 }
 
 .logo{
-font-size:30px;
-font-weight:bold;
 color:#c59d5f;
-letter-spacing:2px;
+font-size:28px;
+font-weight:bold;
+letter-spacing:3px;
 }
 
 /* HERO */
 .hero{
-padding:140px 20px 80px;
-background:linear-gradient(to bottom,#000,#222);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 60px;
+background:linear-gradient(135deg,#000,#1a1a1a);
 }
 
 .hero h1{
-font-size:38px;
+font-size:46px;
 margin-bottom:20px;
 }
 
 .hero p{
 max-width:600px;
-margin:auto;
 color:#ccc;
+font-size:18px;
 line-height:1.6;
 margin-bottom:30px;
 }
 
-/* BOTÃO FAKE */
+/* BOTÃO */
 .btn{
-display:inline-block;
+padding:16px 35px;
 background:#c59d5f;
-padding:15px 30px;
-border-radius:8px;
 color:black;
-font-weight:bold;
 text-decoration:none;
-cursor:default;
+font-weight:bold;
+border-radius:10px;
+transition:.3s;
+box-shadow:0 0 20px rgba(197,157,95,.5);
 }
 
-/* SEÇÕES */
+.btn:hover{
+transform:scale(1.07);
+}
+
+/* SEÇÃO */
 .section{
-padding:70px 20px;
+padding:100px 20px;
+text-align:center;
 }
 
 .cards{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:25px;
-margin-top:40px;
+gap:30px;
+margin-top:50px;
 }
 
 .card{
-background:#1a1a1a;
-padding:25px;
-width:240px;
-border-radius:12px;
-transition:.3s;
+background:#151515;
+padding:30px;
+width:260px;
+border-radius:15px;
+transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 15px #c59d5f;
-}
-
-/* HORÁRIOS */
-.horario{
-background:#1a1a1a;
-padding:40px;
-margin-top:40px;
-border-radius:12px;
-display:inline-block;
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(197,157,95,.3);
 }
 
 /* FOOTER */
 footer{
 background:black;
 padding:30px;
-margin-top:60px;
+text-align:center;
+margin-top:80px;
 }
 
 @media(max-width:600px){
+
 .hero h1{
-font-size:28px;
+font-size:30px;
 }
+
 .cards{
 flex-direction:column;
 align-items:center;
 }
+
 }
 
 </style>
@@ -123,19 +134,21 @@ align-items:center;
 <body>
 
 <header>
-<div class="logo">💈 Barbearia Elite</div>
+<div class="logo">💈 BARBEARIA ELITE</div>
 </header>
 
 <section class="hero">
 
-<h1>Estilo e Precisão para Homens Modernos</h1>
+<h1>Estilo e Sofisticação Masculina</h1>
 
 <p>
-Barbearia especializada em cortes modernos, barba
-e tratamentos masculinos com atendimento premium.
+Experiência premium em cortes, barba e cuidados masculinos
+com atendimento profissional e ambiente moderno.
 </p>
 
-<a class="btn">Agendar Horário</a>
+<a class="btn" href="#">
+Agendar Horário
+</a>
 
 </section>
 
@@ -146,43 +159,21 @@ e tratamentos masculinos com atendimento premium.
 <div class="cards">
 
 <div class="card">
-<h3>Corte Masculino</h3>
-<p>Estilo clássico e moderno.</p>
+<h3>Corte Premium</h3>
+<p>Estilo moderno e sofisticado.</p>
 </div>
 
 <div class="card">
-<h3>Barba Profissional</h3>
-<p>Acabamento perfeito.</p>
+<h3>Barba</h3>
+<p>Acabamento profissional.</p>
 </div>
 
 <div class="card">
-<h3>Combo Premium</h3>
+<h3>Combo VIP</h3>
 <p>Corte + barba completo.</p>
 </div>
 
 </div>
-
-</section>
-
-<section class="section">
-
-<h2>Horário de Atendimento</h2>
-
-<div class="horario">
-<p>Segunda a Sexta — 09:00 às 20:00</p>
-<p>Sábado — 09:00 às 18:00</p>
-<p>Domingo — 10:00 às 14:00</p>
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>SLA de Atendimento</h2>
-
-<p style="max-width:600px;margin:auto;color:#ccc;">
-Tempo médio de resposta: até 2 horas durante horário comercial.
-</p>
 
 </section>
 
